@@ -11,6 +11,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 
+
 /**
  * @ORM\Entity
  * @ORM\Table(name="Phones")
@@ -23,10 +24,13 @@ class Phone
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
      */
+
     private $id;
 
     /**
      * @ORM\Column(type="string")
+     * @ORM\ManyToOne(targetEntity="Contact")
+     * @ORM\JoinColumn(name="id", referencedColumnName="cid")
      */
     private $cid;
 

@@ -37,7 +37,7 @@ class Contact
     /**
      * @ORM\Column(type="string")
      */
-    private $fathername;
+    private $patronymic;
 
     /**
      * @return mixed
@@ -82,16 +82,16 @@ class Contact
     /**
      * @return mixed
      */
-    public function getFathername()
+    public function getPatronymic()
     {
-        return $this->fathername;
+        return $this->patronymic;
     }
 
     /**
-     * @param mixed $fathername
+     * @param mixed $patronymic
      */
-    public function setFathername($fathername): void
+    public function setPatronymic($patronymic): void
     {
-        $this->fathername = $fathername;
+        $this->patronymic = $patronymic;
     }
 }
